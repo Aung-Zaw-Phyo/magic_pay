@@ -1,13 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+-----------------------------------
+Theme Design
+-----------------------------------
+theme - #5842e3
+background - #EDEDF5
+border-radus - 15
+font-size - 0 1px 3px 0 rgba(0, 0, 0, 0.09)
+box-shadow -
+
+*/
+
+@layer base{
+  button {
+    @apply  rounded duration-300 bg-[#5842e3] hover:bg-[#5742e3ca] text-white h-[42px] px-6 py-1
+  }
+  .btn_disable {
+    @apply bg-[#5742e383] hover:bg-[#5742e383]
+  }
+  .title {
+    @apply font-medium text-[26px]
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 md:px-8 mx-auto
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #EDEDF5;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
 }
